@@ -1,3 +1,14 @@
+const buttons = document.querySelectorAll(".calc-button");
+const display = document.querySelector("#result-paragraph");
+
+console.log("Script loaded");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function(clickTarget) {
+        display.textContent += clickTarget.target.textContent;
+    });
+})
+
 function add(number1, number2) {
     return number1 + number2;
 }
